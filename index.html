@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Clicker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Menu Overlay -->
+  <div id="menuOverlay" class="overlay">
+    <h1>Star Clicker</h1>
+    <button id="startBtn">Start Game</button>
+    <div id="menuScores">
+      <p>High Score: <span id="menuHighScore">0</span></p>
+      <div>
+        <p>Latest 5 Games:</p>
+        <ul id="menuLatestScoresList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Over Overlay -->
+  <div id="gameOverOverlay" class="overlay hidden">
+    <h1>Game Over</h1>
+    <p>Your Score: <span id="finalScore">0</span></p>
+    <p>All-Time High Score: <span id="goHighScore">0</span></p>
+    <div>
+      <p>Latest 5 Games:</p>
+      <ul id="goLatestScoresList"></ul>
+    </div>
+    <button id="replayBtn">Replay</button>
+    <button id="exitBtn">Exit</button>
+  </div>
+
+  <!-- Stop Button -->
+  <button id="stopBtn" class="stopBtn hidden">Stop</button>
+
+  <!-- Audio Assets -->
+  <audio id="bgMusic"     src="assets/PixelDreams.mp3" loop></audio>
+  <audio id="collectSound" src="assets/collect.mp3"></audio>
+  <audio id="clickSound"   src="assets/click.mp3"></audio>
+  <audio id="cheerSound"   src="assets/yay.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
